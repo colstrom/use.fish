@@ -23,7 +23,7 @@ function use --argument module
         case '*'
             test -z $FISH_USE_MODULES_PATH
             and set FISH_USE_MODULES_PATH ~/.config/fish/use.modules
-            set module_path (string join / $FISH_USE_MODULES_PATH $module)
+            set module_path (string join / $FISH_USE_MODULES_PATH $module/functions)
             if test -d $module_path
                 use (fish_realpath $module_path)
             else
