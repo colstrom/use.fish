@@ -1,0 +1,32 @@
+#+TITLE: use
+#+LATEX: \pagebreak
+
+* Overview
+
+  ~use~ provides a simple way to add function libraries to your ~$fish_function_path~.
+
+* Usage
+
+  ~use~ uses one of two forms:
+
+** Explicit Path
+ #+BEGIN_SRC fish
+   use /path/to/library
+ #+END_SRC
+
+** Relative to ~$FISH_LIBRARY_PATH~
+#+BEGIN_SRC fish
+  use some-awesome-library
+#+END_SRC
+
+* Customization
+
+  ~use~ reads from a single environment variable: ~FISH_LIBRARY_PATH~, which
+  defaults to ~$fish_config~ if empty.
+
+* License
+
+~use~ is available under the [[https://tldrlegal.com/license/mit-license][MIT License]]. See ~LICENSE.txt~ for the full text.
+
+* Contributors
+- [[https://colstrom.github.io/][Chris Olstrom]] | [[mailto:chris@olstrom.com][e-mail]] | [[https://twitter.com/ChrisOlstrom][Twitter]]
