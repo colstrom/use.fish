@@ -3,7 +3,7 @@
 
 * Overview
 
-  ~use~ provides a simple way to add function libraries to your ~$fish_function_path~.
+  ~use~ provides a simple way to add modules to your ~$fish_function_path~.
 
 * Usage
 
@@ -11,18 +11,20 @@
 
 ** Explicit Path
  #+BEGIN_SRC fish
-   use /path/to/library
+   use /path/to/module
  #+END_SRC
 
-** Relative to ~$FISH_LIBRARY_PATH~
+** Relative to ~$FISH_USE_MODULES_PATH~
 #+BEGIN_SRC fish
-  use some-awesome-library
+  use some-awesome-module
 #+END_SRC
 
 * Customization
 
-  ~use~ reads from a single environment variable: ~FISH_LIBRARY_PATH~, which
-  defaults to ~$fish_config~ if empty.
+  | Environment Variable  | Default                        | Description                      |
+  |-----------------------+--------------------------------+----------------------------------|
+  | FISH_USE_MODULES_PATH | $HOME/.config/fish/use.modules | Where to look for modules        |
+  | QUIET                 |                                | If set, all output is suppressed |
 
 * License
 
