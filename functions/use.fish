@@ -19,13 +19,13 @@ function use --argument module
                 return 21
             end
         case '.*'
-            use (fish_realpath $module)
+            use (realpath $module)
         case '*'
             test -z $FISH_USE_MODULES_PATH
             and set FISH_USE_MODULES_PATH ~/.config/fish/use.modules
             set module_path (string join / $FISH_USE_MODULES_PATH $module/functions)
             if test -d $module_path
-                use (fish_realpath $module_path)
+                use (realpath $module_path)
             else
                 test -z $QUIET
                 and echo cannot import from undefined module: $module >&2
